@@ -1,6 +1,6 @@
 # Prerequisite knowledge: Pytorch 
 
-[Pytorch](https://pytorch.org/) is a software that help us easily train and test network with automatic gradient caculation mechanism. Since this assignment is based on pytorch, I highly recommend you to get familiar with pytorch by finishing [DEEP LEARNING WITH PYTORCH: A 60 MINUTE BLITZ](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html). And you should build up your google cloud pytorch environment and do your homework inside that google cloud. And the pytorch version should be greater than 0.4.0.
+[Pytorch](https://pytorch.org/) is a software that helps us easily train and test network with automatic gradient calculation mechanism. Since this assignment is based on pytorch, I highly recommend you to get familiar with pytorch by finishing [DEEP LEARNING WITH PYTORCH: A 60 MINUTE BLITZ](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html). And you should build up your google cloud pytorch environment and do your homework inside google cloud, so that you can run your code on GPUs. The pytorch version should be greater than 0.4.0.
 
 We provide a [google cloud tutorial](https://github.com/rochesterxugroup/google_cloud_tutorial).
 
@@ -79,10 +79,18 @@ You need to summerize this assignment in a README.txt or README.pdf.
 You are required to write
 
 - pytorch version.
+
 - The training argument of the classifier, including batch size, learning rate, optimization method, epoch number.
+
 - The classification testing accuracy, both overall and class-wise.
+
 - The tracking testing result (AUC)
+
+- Description of how the neural network is trained according to your understanding of pytorch and homework2.
+
 - Description of how the tracker work according to your understanding of the code.
+
+  
 
 # Extra Credit (20pt)
 
