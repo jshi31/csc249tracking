@@ -52,6 +52,24 @@ python DCFtracker.py --model classifier_param.pth
 
 And the test result (AUC) should be greater than 0.4.
 
+### Visualization
+
+You can visualize the tracking result by running 
+
+```bash
+python DCFtracker.py --model classifier_param.pth --visualization
+```
+
+### Compare with standard model
+
+You can check the correctness of `network.py` by running
+
+```
+python DCFtracker.py
+```
+
+it will use the standard tracking model stored in `param.pth`, and the test result (AUC) should be greater than 0.6
+
 # Write Up (30pt)
 
 You need to summerize this assignment in a README.txt or README.pdf. 
@@ -79,5 +97,5 @@ You need to upload the following files:
 - README.txt or README.pdf
 - theoreticalHW.pdf (optional)
 
-Put all the above files in a single folder named `YourNetID`, where YourNetID is replaced by your netid in lower case. Zip such folder with the name `YourNetID.zip` and subbmit. 
+Put all the above files in a single folder named `YourNetID`, where YourNetID is replaced by your netid in lower case. Zip such folder with the name `YourNetID.zip` and submit. 
 
