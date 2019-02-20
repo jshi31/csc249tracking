@@ -18,7 +18,7 @@ Finally, the parameter of the model is saved as `classifier_param.pth`, which wi
 
 # Part2. Implement the DCF tracker (40pt)
 
-The process of how DCF is used for visual tracking is given in the tutorial. Now you are required to implement the DCF tracker based on our provided code. 
+The process of how DCF is used for visual tracking is given in the [DCFtracker tutorial](https://github.com/jshi31/csc249tracking/blob/master/DCFtracker_tutorial.pdf). Now you are required to implement the DCF tracker based on our provided code. 
 
 ## Requirements
 
@@ -94,7 +94,7 @@ You are required to write
 
 # Extra Credit (20pt)
 
-We have two theoretical questions in the tutorial. That will be 10pt for each. Write your solution to these two questions in pdf and name it as `theoreticalHW.pdf`
+We have two theoretical questions in the [DCFtracker tutorial](https://github.com/jshi31/csc249tracking/blob/master/DCFtracker_tutorial.pdf). That will be 10pt for each. Write your solution to these two questions in pdf and name it as `theoreticalHW.pdf`
 
 # Hand In 
 
