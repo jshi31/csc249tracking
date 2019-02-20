@@ -6,7 +6,7 @@ We provide a [google cloud tutorial](https://github.com/rochesterxugroup/google_
 
 
 
-# Part1. Warm up: train an classifier (30pt)
+# Part1. Warm up: train a classifier (30pt)
 
 We will train a classifier on Cifar10 dataset. Please refer to [Pytorch Classification Tutorial](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) to get an idea about how pytorch is used to train neural network. Furthermore, we will use the model trained on Cifar10 as the feature extractor for the DCF tracker later. 
 
