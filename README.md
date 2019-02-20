@@ -37,7 +37,7 @@ cd OTB2015
 ./download.sh 
 python unzip.py
 cd ..
-ln -s path_to_OTB2015 OTB2013
+ln -s absolute_path_to_OTB2015 OTB2013
 ```
 
 ## Test
@@ -59,6 +59,8 @@ You can visualize the tracking result by running
 ```bash
 python DCFtracker.py --model classifier_param.pth --visualization
 ```
+
+and you can see the tracked object in `csc249tracking/visualization`
 
 ### Compare with standard model
 
