@@ -86,14 +86,16 @@ net = DCFNet(config)
 try:
     net.load_param(args.model)
 except:
+    pass
     pre_trained_model = torch.load(args.model)
     new = list(pre_trained_model.items())
     net_kvpair = net.state_dict()
     count = 0
     for key,value in net_kvpair.items():
         layer_name, weights=new[count]
-    net_kvpair[key] = weights
-    count += 1
+        net_kvpair[key] = weights
+        count += 1
+    net.load_state_dict(net_kvpair)
 net.eval().to(device)
 
 speed = []

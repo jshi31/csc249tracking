@@ -28,7 +28,7 @@ class DCFNet(nn.Module):
 
     def forward(self, z):
         """
-        :param z: the multiscale searching patch. Shape (num_scale, channel, crop_sz, crop_sz)
+        :param z: the multiscale searching patch. Shape (num_scale, 3, crop_sz, crop_sz)
         :return response: the response of cross correlation. Shape (num_scale, 1, crop_sz, crop_sz)
 
         You are required to calculate response using self.wf to do cross correlation on the searching patch z
@@ -55,9 +55,9 @@ class DCFNet(nn.Module):
         -- self.config.lambda0: the coefficient of the normalize term.
 
         things you need to calculate:
-        -- self.xf: the fourier transformation of x. Shape (1, 1, crop_sz, crop_sz//2+1, 2)
+        -- self.xf: the fourier transformation of x. Shape (1, channel, crop_sz, crop_sz//2+1, 2)
         -- self.wf: the fourier transformation of optimal correlation filter w, calculated by the formula,
-                    Shape (1, 1, crop_sz, crop_sz//2+1, 2)
+                    Shape (1, channel, crop_sz, crop_sz//2+1, 2)
         """
         # x: feature of patch x with hanning window. Shape (1, 32, crop_sz, crop_sz)
         x = self.feature(x) * self.config.cos_window

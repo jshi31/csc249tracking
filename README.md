@@ -1,6 +1,20 @@
+# CSC249/449 HW3: DCF tracker
+
+*This is the first time to develop DCF tracker as a homework. Hence, whenever you see a bug or something abnormal, please point it out in piazza. Thank you!*
+
+**Important:** all the bugs fixed will be posted in News. 
+
+# News
+
+- [x] **Feb/24/2019:** Fixed the bug of parameter loading in `DCFtracker.py`. Please use the newest repository.
+- [x] **Feb/24/2019:** Fixed the argument description in `network.py`. 
+- [x] **Feb/24/2019:** Released the test result on OTB2013 dataset.
+
+
+
 # Prerequisite knowledge: Pytorch 
 
-[Pytorch](https://pytorch.org/) is a software that helps us easily train and test network with automatic gradient calculation mechanism. Since this assignment is based on pytorch, I highly recommend you to get familiar with pytorch by finishing [DEEP LEARNING WITH PYTORCH: A 60 MINUTE BLITZ](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html). And you should build up your google cloud pytorch environment and do your homework inside google cloud, so that you can run your code on GPUs. The pytorch version should be greater than 0.4.0.
+[Pytorch](https://pytorch.org/) is a software that help us easily train and test network with automatic gradient caculation mechanism. Since this assignment is based on pytorch, I highly recommend you to get familiar with pytorch by finishing [DEEP LEARNING WITH PYTORCH: A 60 MINUTE BLITZ](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html). And you should build up your google cloud pytorch environment and do your homework inside that google cloud. And the pytorch version should be greater than 0.4.0.
 
 We provide a [google cloud tutorial](https://github.com/rochesterxugroup/google_cloud_tutorial).
 
@@ -50,7 +64,22 @@ After you finished the code, just run
 python DCFtracker.py --model classifier_param.pth
 ```
 
-And the test result (AUC) should be greater than 0.4.
+### Test Result
+
+| Random init Param | Loading classifier param | accumulate w | accumulate x | result (AUC)  |
+| :---------------: | :----------------------: | :----------: | :----------: | :-----------: |
+|         ✓         |            ✕             |      ✓       |      ✓       | 0.4652±0.0209 |
+|         ✕         |            ✓             |      ✕       |      ✕       |    0.2219     |
+|         ✕         |            ✓             |      ✓       |      ✕       |    0.4424     |
+|         ✕         |            ✓             |      ✕       |      ✓       |    0.5045     |
+|         ✕         |            ✓             |      ✓       |      ✓       |    0.5259     |
+
+This test result is based on TA's code, which can be a reference of your implementation.
+
+- Random init param: The feature extractor for DCF tracker is random initialized. The old version of the code has bug in parameter loading, so that will be the case of random parameter.
+- Loading classifier param: The feature extractor is initialized with the classifier parameter.
+- Accumulate w: update w as ![\hat w=(1-lr)\times \hat w + lr\times w](http://latex.codecogs.com/gif.latex?%5Chat%20w%3D%281-lr%29%5Ctimes%20%5Chat%20w%20&plus;%20lr%5Ctimes%20w)
+- Accumulate x: update x as ![\hat \phi(x)=(1-lr)\times \hat \phi(x) + lr\times \phi(x)](http://latex.codecogs.com/gif.latex?%5Chat%20%5Cphi%28x%29%3D%281-lr%29%5Ctimes%20%5Chat%20%5Cphi%28x%29%20&plus;%20lr%5Ctimes%20%5Cphi%28x%29)
 
 ### Visualization
 
@@ -59,8 +88,6 @@ You can visualize the tracking result by running
 ```bash
 python DCFtracker.py --model classifier_param.pth --visualization
 ```
-
-and you can see the tracked object in `csc249tracking/visualization`
 
 ### Compare with standard model
 
@@ -79,18 +106,11 @@ You need to summerize this assignment in a README.txt or README.pdf.
 You are required to write
 
 - pytorch version.
-
 - The training argument of the classifier, including batch size, learning rate, optimization method, epoch number.
-
 - The classification testing accuracy, both overall and class-wise.
-
 - The tracking testing result (AUC)
-
 - Description of how the neural network is trained according to your understanding of pytorch and homework2.
-
 - Description of how the tracker work according to your understanding of the code.
-
-  
 
 # Extra Credit (20pt)
 
