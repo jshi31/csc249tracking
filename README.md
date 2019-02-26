@@ -6,6 +6,7 @@
 
 # News
 
+- [x] **Feb/25/2019:** Fixed typos in [DCFtracker tutorial](https://github.com/jshi31/csc249tracking/blob/master/DCFtracker_tutorial.pdf) and added more specific description of the inference process of DCF tracker. 
 - [x] **Feb/24/2019:** Fixed the bug of parameter loading in `DCFtracker.py`. Please use the newest repository.
 - [x] **Feb/24/2019:** Fixed the argument description in `network.py`. 
 - [x] **Feb/24/2019:** Released the test result on OTB2013 dataset.
@@ -32,7 +33,7 @@ Finally, the parameter of the model is saved as `classifier_param.pth`, which wi
 
 # Part2. Implement the DCF tracker (40pt)
 
-The process of how DCF is used for visual tracking is given in the [DCFtracker tutorial](https://github.com/jshi31/csc249tracking/blob/master/DCFtracker_tutorial.pdf). Now you are required to implement the DCF tracker based on our provided code. 
+The process of how DCF is used for visual tracking is given in thec Now you are required to implement the DCF tracker based on our provided code. 
 
 ## Requirements
 
