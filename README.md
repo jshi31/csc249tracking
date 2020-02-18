@@ -1,18 +1,5 @@
 # CSC249/449 HW3: DCF tracker
 
-*This is the first time to develop DCF tracker as a homework. Hence, whenever you see a bug or something abnormal, please point it out in piazza. Thank you!*
-
-**Important:** all the bugs fixed will be posted in News. 
-
-# News
-
-- [x] **Feb/25/2019:** Fixed typos in [DCFtracker tutorial](https://github.com/jshi31/csc249tracking/blob/master/DCFtracker_tutorial.pdf) and added more specific description of the inference process of DCF tracker. 
-- [x] **Feb/24/2019:** Fixed the bug of parameter loading in `DCFtracker.py`. Please use the newest repository.
-- [x] **Feb/24/2019:** Fixed the argument description in `network.py`. 
-- [x] **Feb/24/2019:** Released the test result on OTB2013 dataset.
-
-
-
 # Prerequisite knowledge: Pytorch 
 
 [Pytorch](https://pytorch.org/) is a software that help us easily train and test network with automatic gradient caculation mechanism. Since this assignment is based on pytorch, I highly recommend you to get familiar with pytorch by finishing [DEEP LEARNING WITH PYTORCH: A 60 MINUTE BLITZ](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html). And you should build up your google cloud pytorch environment and do your homework inside that google cloud. And the pytorch version should be greater than 0.4.0.
@@ -21,7 +8,7 @@ We provide a [google cloud tutorial](https://github.com/rochesterxugroup/google_
 
 
 
-# Part1. Warm up: train an classifier (30pt)
+# Part1. Warm up: train an classifier (20pt)
 
 We will train a classifier on Cifar10 dataset. Please refer to [Pytorch Classification Tutorial](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) to get an idea about how pytorch is used to train neural network. Furthermore, we will use the model trained on Cifar10 as the feature extractor for the DCF tracker later. 
 
@@ -52,7 +39,7 @@ cd OTB2015
 ./download.sh 
 python unzip.py
 cd ..
-ln -s absolute_path_to_OTB2015 OTB2013
+ln -s $ABSOLUTE_PATH_to_OTB2015 OTB2013
 ```
 
 ## Test
@@ -100,7 +87,11 @@ python DCFtracker.py
 
 it will use the standard tracking model stored in `param.pth`, and the test result (AUC) should be greater than 0.6
 
-# Write Up (30pt)
+# Theoretical Assignment (30pt)
+
+Please see the Problem 3 and 4 in [theoretical_HW](https://github.com/jshi31/csc249tracking/blob/master/DCFtracker_tutorial.pdf). They are 15pt each. Write your solution to P3 and P4 in pdf and name it as `theoreticalHW.pdf`
+
+# Write Up (10pt)
 
 You need to summerize this assignment in a README.txt or README.pdf. 
 
@@ -126,7 +117,7 @@ You need to upload the following files:
 
 - classifier_param.pth
 - README.txt or README.pdf
-- theoreticalHW.pdf (optional)
+- theoreticalHW.pdf
 
 Put all the above files in a single folder named `YourNetID`, where YourNetID is replaced by your netid in lower case. Zip such folder with the name `YourNetID.zip` and submit. 
 
