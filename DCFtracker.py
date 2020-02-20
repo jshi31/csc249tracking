@@ -145,7 +145,7 @@ for video_id, video in enumerate(videos):  # run without resetting
         # choose the index of best scale
         best_scale = np.argmax(peak)
         # get the coordination of the peak response in z
-        r_max, c_max = np.unravel_index(idx[best_scale].to('cpu'), config.net_input_size)
+        r_max, c_max = np.unravel_index(idx.cpu()[best_scale].to('cpu'), config.net_input_size)
         # r_shift: row shift
         r_shift = r_max - config.net_input_size[0] if r_max > config.net_input_size[0] / 2 else r_max
         # c_shift: column shift
