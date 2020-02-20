@@ -8,7 +8,7 @@ We provide a [google cloud tutorial](https://github.com/rochesterxugroup/google_
 
 
 
-# Part1. Warm up: train an classifier (20pt)
+# Part1. Warm up: train an classifier (15pt)
 
 We will train a classifier on Cifar10 dataset. Please refer to [Pytorch Classification Tutorial](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) to get an idea about how pytorch is used to train neural network. Furthermore, we will use the model trained on Cifar10 as the feature extractor for the DCF tracker later. 
 
@@ -20,7 +20,7 @@ Finally, the parameter of the model is saved as `classifier_param.pth`, which wi
 
 # Part2. Implement the DCF tracker (40pt)
 
-The process of how DCF is used for visual tracking is given in thec Now you are required to implement the DCF tracker based on our provided code. 
+The process of how DCF is used for visual tracking is given in  [DCFtracker tutorial](https://github.com/jshi31/csc249tracking/blob/master/DCFtracker.pdf). Now you are required to implement the DCF tracker based on our provided code. 
 
 ## Requirements
 
@@ -81,17 +81,13 @@ python DCFtracker.py --model classifier_param.pth --visualization
 
 You can check the correctness of `network.py` by running
 
-```
+```shell
 python DCFtracker.py
 ```
 
 it will use the standard tracking model stored in `param.pth`, and the test result (AUC) should be greater than 0.6
 
-# Theoretical Assignment (30pt)
-
-Please see the Problem 3 and 4 in [theoretical_HW](https://github.com/jshi31/csc249tracking/blob/master/DCFtracker_tutorial.pdf). They are 15pt each. Write your solution to P3 and P4 in pdf and name it as `theoreticalHW.pdf`
-
-# Write Up (10pt)
+# Write Up (5pt)
 
 You need to summerize this assignment in a README.txt or README.pdf. 
 
@@ -101,14 +97,8 @@ You are required to write
 - The training argument of the classifier, including batch size, learning rate, optimization method, epoch number.
 - The classification testing accuracy, both overall and class-wise.
 - The tracking testing result (AUC)
-- Description of how the neural network is trained according to your understanding of pytorch and homework2.
-- Description of how the tracker work according to your understanding of the code.
 
-# Extra Credit (20pt)
-
-We have two theoretical questions in the [DCFtracker tutorial](https://github.com/jshi31/csc249tracking/blob/master/DCFtracker_tutorial.pdf). That will be 10pt for each. Write your solution to these two questions in pdf and name it as `theoreticalHW.pdf`
-
-# Hand In 
+# Submission Process 
 
 You need to upload the following files:
 
@@ -117,7 +107,7 @@ You need to upload the following files:
 
 - classifier_param.pth
 - README.txt or README.pdf
-- theoreticalHW.pdf
+- HW3.pdf (including P1, P2, P4)
 
 Put all the above files in a single folder named `YourNetID`, where YourNetID is replaced by your netid in lower case. Zip such folder with the name `YourNetID.zip` and submit. 
 
